@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <h1 className="title">
           Read this Post{" "}
-          <Link href="/posts/first-post">
+          <Link href="/posts/first-post" legacyBehavior>
             <a>첫번째 글</a>
           </Link>
         </h1>

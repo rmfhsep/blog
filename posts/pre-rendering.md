@@ -16,6 +16,4 @@ Importantly, Next.js lets you **choose** which pre-rendering form to use for eac
 
 [google](https://google.com)
 
-> 이거되나?
->
-> > 되겠지?
+### pre-rendering

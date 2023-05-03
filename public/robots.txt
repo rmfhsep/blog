@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blog-three-cyan.vercel.app/
+
+# Sitemaps
+Sitemap: https://blog-three-cyan.vercel.app/sitemap.xml

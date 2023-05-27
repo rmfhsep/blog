@@ -6,8 +6,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Utterances from "./Utterances";
 
-const name = "Your Name";
-export const siteTitle = "Next.js Sample Website";
+const name = "Jung-Hoon Kim";
+export const siteTitle = "hoonys blog";
 
 export default function Layout({ children, home }) {
   const [theme, setTheme] = useState(() =>
@@ -40,7 +40,7 @@ export default function Layout({ children, home }) {
     }
   }, [theme])
   return (
-    <div className="bg-white dark:bg-black text-gray-800 dark:text-gray-200">
+    <div className="bg-white dark:bg-black text-gray-800 dark:text-gray-200 h-screen">
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />

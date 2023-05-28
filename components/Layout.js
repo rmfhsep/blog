@@ -9,38 +9,42 @@ import Utterances from "./Utterances";
 const name = "Jung-Hoon Kim";
 export const siteTitle = "hoonys blog";
 
-export default function Layout({ children, home }) {
-  const [theme, setTheme] = useState(() =>
-    typeof window !== "undefined"
-      ? localStorage.getItem("theme") === "dark"
-        ? "dark"
-        : "light"
-      : "light"
-  ); 
+export default function Layout({ children, home}) {
+ const [theme, setTheme] = useState(() =>
+   typeof window !== "undefined"
+     ? localStorage.getItem("theme") === "dark"
+       ? "dark"
+       : "light"
+     : "light"
+ );
 
-  const handleClick = () => {
-    if(typeof window !== 'undefined') {
-    const theme = localStorage.getItem('theme')
-    if(theme === "dark") {
-      localStorage.setItem('theme', 'light')
-      setTheme('light')
-    } else {
-      localStorage.setItem('theme', 'dark')
-      setTheme("dark");
-    }
-    }
-    
-  }
+ const handleClick = () => {
+   if (typeof window !== "undefined") {
+     const theme = localStorage.getItem("theme");
+     if (theme === "dark") {
+       localStorage.setItem("theme", "light");
+       setTheme("light");
+     } else {
+       localStorage.setItem("theme", "dark");
+       setTheme("dark");
+     }
+   }
+ };
 
-  useEffect(() => {
-    if(theme === 'dark') {
-      document.querySelector('body').classList.add('dark')
-    } else {
-      document.querySelector("body").classList.remove("dark");
-    }
-  }, [theme])
+ useEffect(() => {
+   if (theme === "dark") {
+     document.querySelector("body").classList.add("dark");
+   } else {
+     document.querySelector("body").classList.remove("dark");
+   }
+ }, [theme]);
+
+  console.log("레이아웃", theme)
   return (
-    <div className="bg-white dark:bg-black text-gray-800 dark:text-gray-200 h-screen">
+    <div
+      className="bg-gray-800 text-gray-800 dark:text-gray-200 flex justify-center min-h-screen"
+      style={{ minWidth: "300px" }}
+    >
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
@@ -57,13 +61,13 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <button className="w-12 px-2" onClick={handleClick}>
+        {/* <button className="w-12 px-2" onClick={handleClick}>
           {theme === "dark" ? (
             <img src="/light-mode.svg" alt="light" />
           ) : (
             <img src="/dark-mode.svg" alt="dark" />
           )}
-        </button>
+        </button> */}
         <header className={styles.header}>
           {home ? (
             <>
@@ -102,7 +106,9 @@ export default function Layout({ children, home }) {
           <>
             <Utterances />
             <div className={styles.backToHome}>
-              <Link href="/">← Back to home</Link>
+              <Link href="/" className="text-slate-300">
+                ← Back to home
+              </Link>
             </div>
           </>
         )}

@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {
     paths,
-    fallback: "blocking",
+    fallback: true,
 
     // fallback true 로 하면
   };
@@ -53,6 +53,7 @@ export default function Post({ postData }) {
           <MDXRemote {...postData.mdxSource} components={components} />
         )}
       </article>
+
     </Layout>
   );
 }

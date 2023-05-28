@@ -40,11 +40,12 @@ export default function Post({ postData }) {
   }
   return (
     <Layout>
-      <article>
+      <article className="mb-20">
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
+        <hr className="bg-indigo-500 h-1 mt-4 mb-6 border-0"></hr>
         <br />
         {postData.contentHtml && (
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
@@ -53,7 +54,6 @@ export default function Post({ postData }) {
           <MDXRemote {...postData.mdxSource} components={components} />
         )}
       </article>
-
     </Layout>
   );
 }

@@ -19,6 +19,7 @@
   line-height: 1.4;
   font-weight: 800;
   margin: 1rem 0;
+  color:#fff
 }
 
 .headingMd {
@@ -45,9 +46,9 @@
 }
 
 .listItem {
-  margin: 0 0 1.25rem;
+  margin: 1rem 0 1.25rem;
 }
 
 .lightText {
-  color: #666;
+  color: rgb(188, 188, 188);
 }

@@ -42,7 +42,7 @@ export default function Layout({ children, home}) {
   console.log("레이아웃", theme)
   return (
     <div
-      className="bg-gray-800 text-gray-800 dark:text-gray-200 flex justify-center min-h-screen"
+      className="bg-gray-800 text-gray-200 flex justify-center min-h-screen"
       style={{ minWidth: "300px" }}
     >
       <div className={styles.container}>

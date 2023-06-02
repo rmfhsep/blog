@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
           안녕하세요. <br />
           웹을 통해 편한 세상을 만드는 김정훈입니다.
         </p>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col md:flex-row">
           <p className="text-slate-300">✉️ rmfhsep@gmail.com</p>
           <p className="text-slate-300">🐱 https://github.com/rmfhsep</p>
         </div>

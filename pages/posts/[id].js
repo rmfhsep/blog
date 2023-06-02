@@ -48,7 +48,10 @@ export default function Post({ postData }) {
         <hr className="bg-indigo-500 h-1 mt-4 mb-6 border-0"></hr>
         <br />
         {postData.contentHtml && (
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            className="w-4/5 max-w-md"
+          />
         )}
         {postData.mdxSource && (
           <MDXRemote {...postData.mdxSource} components={components} />

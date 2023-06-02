@@ -40,7 +40,14 @@ export default function Wtire() {
       <Layout>
         <h1>Write a post</h1>
         <form onSubmit={handleSubmit}>
-          <input type="text" name="id" placeholder="id" required ref={idRef} />
+          <input
+            type="text"
+            name="id"
+            placeholder="id"
+            required
+            ref={idRef}
+            className="mt-2"
+          />
           <br />
           <input
             type="text"
@@ -48,6 +55,7 @@ export default function Wtire() {
             placeholder="title"
             required
             ref={titleRef}
+            className="mt-2"
           />
           <br />
           <textarea
@@ -56,12 +64,14 @@ export default function Wtire() {
             placeholder="content"
             required
             ref={contentRef}
+            className="w-3/4 mt-2"
           />
           <br />
-          <input type="submit" value="Create"/>
+          <input type="submit" value="Create" />
         </form>
-        {showLink && <Link href={`/posts/${idRef.current.value}`}>
-            Created Posts</Link>}
+        {showLink && (
+          <Link href={`/posts/${idRef.current.value}`}>Created Posts</Link>
+        )}
       </Layout>
     );
 }
